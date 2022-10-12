@@ -1,0 +1,31 @@
+Run automatically a code in raspberry after startup / boot:
+https://forums.raspberrypi.com/viewtopic.php?t=135545
+_________________________________________________________________________________
+
+	sudo nano /etc/rc.local
+
+in this script just above last line (above exit) add this line
+
+	cam.sh &
+
+This will run my_start_up_cb_script.sh every time you boot.
+You can name script as you like, but save it in /usr/local/bin/ folder
+
+	sudo nano /usr/local/bin/cam.sh
+
+than paste in this:
+
+	#! /bin/bash
+	cd /home/pi/Desktop/cam
+	python cam.py     #run your command
+	exit
+
+When you save this script it is IMPORTANT that you make it executable
+
+	sudo chmod a+x usr/local/bin/cam.sh
+
+About shuting it down, you will have to
+1/ log into rpi,
+2/ OR you can make a button (if you are a bit of DIY guy) and add a script to shutdown
+3/ OR buy premade power on/of button for raspberry pi
+4/ OR just disconnect the cable, BUT this will lead to SD card to became corrupted faster...
