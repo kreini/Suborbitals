@@ -1,8 +1,8 @@
-## Suborbitals
+# Suborbitals
 Saját prototípus raspberry-s kódok kamera és szenzorolvasáshoz
 
-# Erebos
+### Erebos
 Raspberry kamerákat alkalmaztunk
 
-# Prometheus
+### Prometheus
 SQ8 kamerákat alkalmaztunk, külső tápellátással, lekapcsolással és vezérléssel
